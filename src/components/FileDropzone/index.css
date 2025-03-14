@@ -1,0 +1,23 @@
+.dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 30rem;
+
+    font-weight: bold;
+
+    margin-top: var(--spacing-xxl);
+
+    border: 2pt solid var(--seconday-color);
+    border-radius: 1rem;
+}
+
+.input_drag {
+    background-color: rgb(75, 75, 75);
+    border-color: white;
+}
+
+.dropzone__upload-icon {
+    width: 10rem;
+}
