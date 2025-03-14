@@ -1,0 +1,9 @@
+.file-data-display {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.csv {
+    width: 5rem;
+}
