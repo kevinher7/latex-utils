@@ -14,6 +14,7 @@ const FileDropzone = () => {
     const [fileData, setFileData] = useState<FileData | null>(null);
     const [currentFile, setCurrentFile] = useState<File | null>(null);
     const { datapoints, getDatapoints } = useParseData();
+
     useEffect(() => {
         if (!datapoints || !currentFile) {
             return;
@@ -70,7 +71,7 @@ const FileDropzone = () => {
                             className="dropzone__upload-icon"
                         />
                     ) : (
-                        <p> Drag and drop some files here, or click browse</p>
+                        <p>Drag and drop some files here, or click browse</p>
                     )}
                 </>
             )}
