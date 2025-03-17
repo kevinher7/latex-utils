@@ -1,8 +1,9 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { FileWithPath, useDropzone } from "react-dropzone";
 
 import FileDataDisplay from "../FileDataDisplay";
+import useParseData from "../../hooks/useParseData";
 
 import FileData from "../../types/FileData";
 
@@ -11,29 +12,45 @@ import "./index.css";
 
 const FileDropzone = () => {
     const [fileData, setFileData] = useState<FileData | null>(null);
+    const [currentFile, setCurrentFile] = useState<File | null>(null);
+    const { datapoints, getDatapoints } = useParseData();
+    useEffect(() => {
+        if (!datapoints || !currentFile) {
+            return;
+        }
+
+        setFileData({
+            name: currentFile.name,
+            size: `${currentFile.size} KB`,
+            contents: datapoints,
+        });
+
+        console.log(datapoints);
+    }, [datapoints]);
+
     const onDrop = useCallback((acceptedFiles: readonly FileWithPath[]) => {
         const file = acceptedFiles[0];
+        setCurrentFile(file);
+
         const reader = new FileReader();
 
-        reader.onabort = () => console.log("file reading was aborted");
-        reader.onerror = () => console.log("file reading has failed");
+        reader.onabort = () => console.log("File reading was aborted");
+        reader.onerror = () => console.error("File reading has failed");
         reader.onload = () => {
-            // Do whatever you want with the file contents
             const csvData = reader.result;
+
             if (typeof csvData !== "string") {
                 throw new TypeError(
                     "File should be read using 'readAsText' method"
                 );
             }
 
-            setFileData({
-                name: file.name,
-                size: `${file.size} KB`,
-                contents: csvData,
-            });
+            getDatapoints(csvData);
         };
+
         reader.readAsText(file);
     }, []);
+
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop,
     });
@@ -51,7 +68,7 @@ const FileDropzone = () => {
                     {isDragActive ? (
                         <img
                             src={UploadIcon}
-                            alt="Upload!"
+                            alt="Dw, Let the click button go!"
                             className="dropzone__upload-icon"
                         />
                     ) : (
