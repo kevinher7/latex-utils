@@ -24,8 +24,6 @@ const FileDropzone = () => {
             size: `${currentFile.size} KB`,
             contents: datapoints,
         });
-
-        console.log(datapoints);
     }, [datapoints]);
 
     const onDrop = useCallback((acceptedFiles: readonly FileWithPath[]) => {
