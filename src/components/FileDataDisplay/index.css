@@ -4,6 +4,14 @@
     width: 100%;
 }
 
+.file-data-display__properties > h2 {
+    font: var(--h2-font);
+}
+
+.file-data-display__properties > p {
+    font: var(--p-font);
+}
+
 .csv {
-    width: 5rem;
+    width: 10rem;
 }
