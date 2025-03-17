@@ -17,6 +17,7 @@
     --h3-font: bold 1.8rem/1.8em var(--ff);
     --p-font: bold 1.2rem/1.5em var(--ff);
     --th-font: bold 1.6rem/1.2em var(--ff);
+    --button-font: bold 3rem/1.2em var(--ff);
 
     /* Spacing Distances */
     --spacing-xss: 0.25rem;
