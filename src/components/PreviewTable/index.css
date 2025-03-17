@@ -1,0 +1,28 @@
+.preview-table {
+    width: 10rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.preview-table th,
+.preview-table td {
+    width: 50%;
+    border: 2px solid var(--seconday-color);
+}
+
+.preview-table__y {
+    font: var(--th-font);
+    color: var(--seconday-color);
+}
+
+.preview-table > thead {
+    font: var(--th-font);
+    color: var(--seconday-color);
+}
+
+.preview-table > tbody {
+    font: var(--p-font);
+    color: white;
+    text-align: center;
+}
