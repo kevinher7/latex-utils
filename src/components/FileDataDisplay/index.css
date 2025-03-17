@@ -1,15 +1,23 @@
 .file-data-display {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
+}
+
+.file-data-display__preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-data-display__preview > h3 {
+    font: var(--h3-font);
 }
 
 .file-data-display__properties > h2 {
     font: var(--h2-font);
-}
-
-.file-data-display__properties > p {
-    font: var(--p-font);
 }
 
 .csv {
