@@ -7,6 +7,7 @@ import "./index.css";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import TableUtilPage from "./pages/TableUtilPage";
+import { MathJaxContext } from "better-react-mathjax";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <RouterProvider router={router} />
+        <MathJaxContext>
+            <RouterProvider router={router} />
+        </MathJaxContext>
     </StrictMode>
 );
