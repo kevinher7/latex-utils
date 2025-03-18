@@ -29,6 +29,7 @@ const FileDropzone = () => {
             name: currentFile.name,
             size: `${currentFile.size} KB`,
             contents: datapoints,
+            numDataPairs: datapoints.split(",").length - 1,
         });
     }, [datapoints]);
 

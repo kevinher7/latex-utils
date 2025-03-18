@@ -20,6 +20,7 @@ const FileDataDisplay = (props: FileDataDisplayProps) => {
             <div className="file-data-display__preview">
                 <h3>Data Preview</h3>
                 <PreviewTable datapoints={props.data.contents} />
+                <p>{props.data.numDataPairs} data pairs</p>
             </div>
         </div>
     );
