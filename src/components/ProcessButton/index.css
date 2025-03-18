@@ -1,0 +1,22 @@
+.process-button {
+    display: block;
+    margin-top: var(--spacing-xxl);
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: var(--spacing-xxl);
+
+    font: var(--button-font);
+
+    border: 2px solid gray;
+    border-radius: 2rem;
+
+    color: gray;
+    background-color: #242424;
+}
+
+.process-button:hover {
+    cursor: pointer;
+    color: white;
+    border-color: white;
+}
