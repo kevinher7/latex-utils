@@ -6,7 +6,11 @@
 
     padding: var(--spacing-xxl);
 
+    width: fit-content;
+
     font: var(--button-font);
+    text-align: center;
+    text-decoration: none;
 
     border: 2px solid gray;
     border-radius: 2rem;
