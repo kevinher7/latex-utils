@@ -1,0 +1,24 @@
+.table-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 30rem;
+}
+
+.table-preview__math-jax {
+    padding-inline: var(--spacing-xxl);
+    border: 2px solid white;
+    overflow-y: auto;
+}
+
+.table-preview__error {
+    color: red;
+    font: var(--p-font);
+}
+
+.table-preview__warning {
+    color: yellow;
+    font: var(--p-font);
+}
