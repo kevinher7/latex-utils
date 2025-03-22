@@ -13,6 +13,7 @@
     /* Fonts */
     --ff: "Helvetica", sans-serif;
     --title-font: bold 4rem/1em var(--ff);
+    --h1-font: bold 3rem/2.2em var(--ff);
     --h2-font: bold 2.5rem/1.8em var(--ff);
     --h3-font: bold 1.8rem/1.8em var(--ff);
     --p-font: bold 1.2rem/1.5em var(--ff);
@@ -50,6 +51,10 @@ body {
     justify-content: center;
 
     height: 100dvh;
+}
+
+h1 {
+    font: var(--h1-font);
 }
 
 @media (prefers-color-scheme: light) {
